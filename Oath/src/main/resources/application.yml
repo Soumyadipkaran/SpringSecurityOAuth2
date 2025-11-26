@@ -1,0 +1,17 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: <Your id>
+            client-secret: <Your secret>
+            redirect-uri: http://localhost:8083/login/oauth2/code/google
+
+            scope:
+              - openid
+              - email
+              - profile
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
